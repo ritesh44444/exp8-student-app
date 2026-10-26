@@ -86,3 +86,4 @@ If Git asks you to authenticate, complete the browser sign-in prompt or use a Gi
 - Uploading a project using Git CLI
 
 Do not commit virtual environments, local database files, secrets, or access tokens.
+# exp8-student-app
