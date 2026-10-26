@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Information — Django + SQLite</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 16px; }
+    table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+    th { background: #f0f0f0; }
+  </style>
+</head>
+<body>
+  <h1>Student Information</h1>
+  <p>Django application retrieving records from an SQLite database.</p>
+  {% if students %}
+  <table>
+    <thead><tr><th>Roll No.</th><th>Name</th><th>Branch</th><th>Marks</th></tr></thead>
+    <tbody>
+      {% for student in students %}
+      <tr>
+        <td>{{ student.roll_no }}</td>
+        <td>{{ student.name }}</td>
+        <td>{{ student.branch }}</td>
+        <td>{{ student.marks }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p>No student records found.</p>
+  {% endif %}
+</body>
+</html>
